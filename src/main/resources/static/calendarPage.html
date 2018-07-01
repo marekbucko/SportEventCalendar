@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:border="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+            integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+    <link rel="import" href="navbar.html">
+    <meta charset="UTF-8">
+    <title>Kalendarz</title>
+</head>
+<body>
+
+<div id="container"></div>
+<script>
+    var link = document.querySelector('link[rel="import"]');
+
+    var template = link.import.querySelector('template');
+    var clone = document.importNode(template.content, true);
+
+    document.querySelector('#container').appendChild(clone);
+</script>
+<div>
+    Strona kalendarza
+</div>
+
+<center><h1>
+
+    <caption  border: 1px solid black>Kalendarz Imprez</caption>
+</h1>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px;
+        }
+    </style>
+
+
+<table>
+    <tr>
+        <th></th>
+        <th scope="col">Poniedziałek</th>
+        <th scope="col">Wtorek</th>
+        <th scope="col"> Środa</th>
+        <th scope="col">Czwartek</th>
+        <th scope="col"> Piątek</th>
+        <th scope="col"> Sobota</th>
+        <th scope="col">Niedziela</th>
+    </tr>
+    <tr>
+        <th scope="row">08:00</th>
+        <td><a button type="button" class="btn btn-basic btn-sm" data-toggle="modal" data-target="#exampleModal">Kręgle</a></td>
+        <td><a button type="button" class="btn btn-secondary btn-sm" href="index.html">Polo</a></td>
+        <td><a button type="button" class="btn btn-basic btn-sm" href="index.html">Polo</a></td>
+        <td><a button type="button" class="btn btn-secondary btn-sm" href="index.html">Krykiet</a></td>
+        <td><a button type="button" class="btn btn-basic btn-sm" href="index.html">Krykiet</a></td>
+        <td><a button type="button" class="btn btn-secondary btn-sm" href="index.html">Krykiet</a></td>
+        <td><a button type="button" class="btn btn-danger btn-sm" href="index.html">Krykiet</a></td>
+    </tr>
+    <tr>
+        <th scope="row">09:00</th>
+        <td><a button type="button" class="btn btn-basic btn-sm" href="index.html">Kręgle</a></td>
+        <td><a button type="button" class="btn btn-secondary btn-sm" href="index.html">Polo</a></td>
+        <td><a button type="button" class="btn btn-basic btn-sm" href="index.html">Polo</a></td>
+        <td><a button type="button" class="btn btn-secondary btn-sm" href="index.html">Krykiet</a></td>
+        <td><a button type="button" class="btn btn-basic btn-sm" href="index.html">Krykiet</a></td>
+        <td><a button type="button" class="btn btn-secondary btn-sm" href="index.html">Krykiet</a></td>
+        <td><a button type="button" class="btn btn-danger btn-sm" href="index.html">Krykiet</a></td>
+    </tr>
+    <tr>
+        <th scope="row">10:00</th>
+        <td><a button type="button" class="btn btn-basic btn-sm" href="index.html">Kręgle</a></td>
+        <td><a button type="button" class="btn btn-secondary btn-sm" href="index.html">Polo</a></td>
+        <td><a button type="button" class="btn btn-basic btn-sm" href="index.html">Polo</a></td>
+        <td><a button type="button" class="btn btn-secondary btn-sm" href="index.html">Krykiet</a></td>
+        <td><a button type="button" class="btn btn-basic btn-sm" href="index.html">Krykiet</a></td>
+        <td><a button type="button" class="btn btn-secondary btn-sm" href="index.html">Krykiet</a></td>
+        <td><a button type="button" class="btn btn-danger btn-sm" href="index.html">Krykiet</a></td>
+    </tr>
+    <tr>
+        <th scope="row">11:00</th>
+        <td><a button type="button" class="btn btn-basic btn-sm" href="index.html">Kręgle</a></td>
+        <td><a button type="button" class="btn btn-secondary btn-sm" href="index.html">Polo</a></td>
+        <td><a button type="button" class="btn btn-basic btn-sm" href="index.html">Polo</a></td>
+        <td><a button type="button" class="btn btn-secondary btn-sm" href="index.html">Krykiet</a></td>
+        <td><a button type="button" class="btn btn-basic btn-sm" href="index.html">Krykiet</a></td>
+        <td><a button type="button" class="btn btn-secondary btn-sm" href="index.html">Krykiet</a></td>
+        <td><a button type="button" class="btn btn-danger btn-sm" href="index.html">Krykiet</a></td>
+    </tr>
+    <tr>
+        <th scope="row">12:00</th>
+        <td><a button type="button" class="btn btn-basic btn-sm" href="index.html">Kręgle</a></td>
+        <td><a button type="button" class="btn btn-secondary btn-sm" href="index.html">Polo</a></td>
+        <td><a button type="button" class="btn btn-basic btn-sm" href="index.html">Polo</a></td>
+        <td><a button type="button" class="btn btn-secondary btn-sm" href="index.html">Krykiet</a></td>
+        <td><a button type="button" class="btn btn-basic btn-sm" href="index.html">Krykiet</a></td>
+        <td><a button type="button" class="btn btn-secondary btn-sm" href="index.html">Krykiet</a></td>
+        <td><a button type="button" class="btn btn-danger btn-sm" href="index.html">Krykiet</a></td>
+    </tr>
+    <tr>
+        <th scope="row">13:00</th>
+        <td><a button type="button" class="btn btn-basic btn-sm" href="index.html">Kręgle</a></td>
+        <td><a button type="button" class="btn btn-secondary btn-sm" href="index.html">Polo</a></td>
+        <td><a button type="button" class="btn btn-basic btn-sm" href="index.html">Polo</a></td>
+        <td><a button type="button" class="btn btn-secondary btn-sm" href="index.html">Krykiet</a></td>
+        <td><a button type="button" class="btn btn-basic btn-sm" href="index.html">Krykiet</a></td>
+        <td><a button type="button" class="btn btn-secondary btn-sm" href="index.html">Krykiet</a></td>
+        <td><a button type="button" class="btn btn-danger btn-sm" href="index.html">Krykiet</a></td>
+    </tr>
+    <tr>
+        <th scope="row">14:00</th>
+        <td><a button type="button" class="btn btn-basic btn-sm" href="index.html">Kręgle</a></td>
+        <td><a button type="button" class="btn btn-secondary btn-sm" href="index.html">Polo</a></td>
+        <td><a button type="button" class="btn btn-basic btn-sm" href="index.html">Polo</a></td>
+        <td><a button type="button" class="btn btn-secondary btn-sm" href="index.html">Krykiet</a></td>
+        <td><a button type="button" class="btn btn-basic btn-sm" href="index.html">Krykiet</a></td>
+        <td><a button type="button" class="btn btn-secondary btn-sm" href="index.html">Krykiet</a></td>
+        <td><a button type="button" class="btn btn-danger btn-sm" href="index.html">Krykiet</a></td>
+    </tr>
+    <tr>
+        <th scope="row">15:00</th>
+        <td><a button type="button" class="btn btn-basic btn-sm" href="index.html">Kręgle</a></td>
+        <td><a button type="button" class="btn btn-secondary btn-sm" href="index.html">Polo</a></td>
+        <td><a button type="button" class="btn btn-basic btn-sm" href="index.html">Polo</a></td>
+        <td><a button type="button" class="btn btn-secondary btn-sm" href="index.html">Krykiet</a></td>
+        <td><a button type="button" class="btn btn-basic btn-sm" href="index.html">Krykiet</a></td>
+        <td><a button type="button" class="btn btn-secondary btn-sm" href="index.html">Krykiet</a></td>
+        <td><a button type="button" class="btn btn-danger btn-sm" href="index.html">Krykiet</a></td>
+    </tr>
+    <tr>
+        <th scope="row">16:00</th>
+        <td><a button type="button" class="btn btn-basic btn-sm" href="index.html">Kręgle</a></td>
+        <td><a button type="button" class="btn btn-secondary btn-sm" href="index.html">Polo</a></td>
+        <td><a button type="button" class="btn btn-basic btn-sm" href="index.html">Polo</a></td>
+        <td><a button type="button" class="btn btn-secondary btn-sm" href="index.html">Krykiet</a></td>
+        <td><a button type="button" class="btn btn-basic btn-sm" href="index.html">Krykiet</a></td>
+        <td><a button type="button" class="btn btn-secondary btn-sm" href="index.html">Krykiet</a></td>
+        <td><a button type="button" class="btn btn-danger btn-sm" href="index.html">Krykiet</a></td>
+    </tr>
+
+</table>
+
+
+
+
+
+
+</center>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+

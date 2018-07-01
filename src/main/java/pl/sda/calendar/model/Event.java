@@ -1,9 +1,7 @@
 package pl.sda.calendar.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import org.hibernate.validator.constraints.UniqueElements;
 
 import javax.persistence.*;
 import javax.validation.constraints.Max;
@@ -27,4 +25,7 @@ public class Event {
     @NotNull
     @Max(50)
     private Integer maxGroupSize;
+
+//    @NotNull
+//    private Data data;
 }
