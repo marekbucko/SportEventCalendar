@@ -1,29 +1,30 @@
 package pl.sda.calendar.controller;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import pl.sda.calendar.model.Event;
-import pl.sda.calendar.repository.EventRepository;
+import pl.sda.calendar.model.User;
+import pl.sda.calendar.repository.UserRepository;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/event")
-public class EventController {
+@RequestMapping("/user")
+public class UserController {
 
     @Autowired
-    private EventRepository eventRepository;
+    private UserRepository userRepository;
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Event createEvent(@RequestBody Event newEvent) {
-        return eventRepository.save(newEvent);
+    public User createUser(@RequestBody User newUser) {
+        return userRepository.save(newUser);
     }
 
     @GetMapping("/findall")
     @ResponseStatus(HttpStatus.OK)
-    public List<Event> showEvents() {
-        return eventRepository.findAll();
+    public List<User> showEvents() {
+        return userRepository.findAll();
     }
 }
