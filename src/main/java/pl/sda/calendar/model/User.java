@@ -21,18 +21,17 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    protected Long id;
+    private Long id;
 
     @NotNull
-    @UniqueElements
-    public String userName;
+    @Column(unique = true)
+    private String userName;
 
     @Email
     @NotNull
-    @UniqueElements
-    public String userEmail;
+    @Column(unique = true)
+    private String userEmail;
 
     @NotNull
-    @UniqueElements
-    public String password;
+    private String password;
 }

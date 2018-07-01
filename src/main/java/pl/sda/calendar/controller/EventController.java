@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import pl.sda.calendar.model.Event;
 import pl.sda.calendar.repository.EventRepository;
+import pl.sda.calendar.service.EventService;
 
 import java.util.List;
 
@@ -13,12 +14,14 @@ import java.util.List;
 public class EventController {
 
     @Autowired
-    private EventRepository eventRepository;
+    private EventService eventService;
+
+    @Autowired EventRepository eventRepository;
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Event createEvent(@RequestBody Event newEvent) {
-        return eventRepository.save(newEvent);
+        return eventService.createEvent(newEvent);
     }
 
     @GetMapping("/findall")
