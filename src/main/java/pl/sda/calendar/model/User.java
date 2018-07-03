@@ -1,15 +1,16 @@
 package pl.sda.calendar.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.validator.constraints.UniqueElements;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
-import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
+import java.util.Set;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -34,4 +35,9 @@ public class User {
 
     @NotNull
     private String password;
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable
+    @JsonBackReference
+    private Set<Event> events;
 }

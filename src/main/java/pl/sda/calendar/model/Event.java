@@ -1,11 +1,13 @@
 package pl.sda.calendar.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.*;
 import org.hibernate.validator.constraints.UniqueElements;
 
 import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
+import java.util.Set;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -26,6 +28,6 @@ public class Event {
     @Max(50)
     private Integer maxGroupSize;
 
-//    @NotNull
-//    private Data data;
+    @ManyToMany(mappedBy = "events", fetch = FetchType.EAGER)
+    private Set<User> users;
 }

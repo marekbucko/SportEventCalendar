@@ -6,4 +6,5 @@ import pl.sda.calendar.model.Event;
 
 @Repository
 public interface EventRepository extends JpaRepository<Event, Long> {
+
 }
